@@ -1,11 +1,11 @@
-const { WebDriver } = require('selenium-webdriver')
+const { WebDriver, By } = require('selenium-webdriver')
 const { expect } = require('chai')
 
 const setupDriver = require('../helpers/setupDriver')
 const { loginWithStandardUser } = require('../helpers/authentication')
 const InventoryPage = require('../pageobjects/InventoryPage')
 
-describe.only('coba scroll', function () {
+describe.only('coba select option', function () {
 	/** @type {WebDriver} */ let driver
 	/** @type {InventoryPage} */ let inventoryPage
 
@@ -16,10 +16,10 @@ describe.only('coba scroll', function () {
 		inventoryPage = new InventoryPage(driver)
 	})
 
-	it('scroll ke bawah', async function () {
+	it('urutkan produk berdasarkan nama secara descending', async function () {
 		await inventoryPage.openPage()
-		await inventoryPage.scrollToBottom()
-		await new Promise(r => setTimeout(r, 1000)) // sleep 1 sec
+		await inventoryPage.sortByTitleDescending()
+		await new Promise(r => setTimeout(r, 3000)) // sleep 1 sec
 	})
 
 	after(function () {

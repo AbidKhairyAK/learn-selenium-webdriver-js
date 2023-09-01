@@ -15,7 +15,7 @@ describe('test story / suite title', function () {
 		// initialize your pageobject class here
 	})
 
-	it('test case title', function () {
+	it('test case title', async function () {
 		// write your test script here
 	})
 
