@@ -5,7 +5,7 @@ const setupDriver = require('../helpers/setupDriver')
 const { loginWithStandardUser } = require('../helpers/authentication')
 const InventoryPage = require('../pageobjects/InventoryPage')
 
-describe.only('coba scroll', function () {
+describe('coba scroll', function () {
 	/** @type {WebDriver} */ let driver
 	/** @type {InventoryPage} */ let inventoryPage
 
